@@ -5,6 +5,7 @@ SMALL LANGUAGE MODEL
 Documentation
 Small Language Model (SLM) for File-Based Question Answering. The Small Language Model (SLM) is a lightweight, tool designed to process text-based files and answer user questions based on the content. This model leverages state-of-the-art natural language processing (NLP) techniques to comprehend, retrieve, and generate responses from various file formats such as .txt, .pdf, and .docx. The system is built with simplicity in mind, ensuring that users can interact with it seamlessly without requiring extensive technical knowledge. 
 Small Language Model :
+•	install package through : pip install transformers torch PyPDF2 python-docx
 •	The class initializes a pre-trained question-answering model (distilbert-base-cased-distilled-squad) from Hugging Face's transformers library.
 •	The read_file method reads the content of a file based on its type (.txt, .pdf, or .docx).
 
@@ -35,7 +36,7 @@ To ensure the SLM performs accurately and reliably, a rigorous evaluation proces
 •	Exact Match (EM) : This metric is strict and requires perfect alignment between the predicted and actual answers.
 •	F1 Score : It accounts for partial matches between the predicted and ground truth answers.
 •	Cross-Validation : To avoid overfitting and ensure robustness, the model was evaluated using k-fold cross-validation .
-•	Human Evaluation : In addition to automated metrics, a panel of human evaluators was tasked with assessing the quality of the model's responses. They rated the answers based on Relevance, Clarity, Accuracy.
+•	Human Evaluation : In addition to automated metrics, a panel of human evaluators was tasked with assessing the quality of the model's responses. They rated the answers based on Relevance,             Clarity, Accuracy.
 •	Error Analysis : Common errors were analyzed to identify areas for improvement. For example Ambiguous Questions, Out-of-Scope Queries, Long Documents.
 
 Conclusion  
