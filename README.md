@@ -26,7 +26,6 @@ Text Cleaning :
 •	Context Truncation : Since transformer models have a maximum token limit (typically 512 tokens), longer documents are truncated to fit within this limit. In cases where the document exceeds the token limit, only the most relevant sections are retained for processing.
 •	Padding : If the input text is shorter than the maximum token length, padding tokens are added to ensure uniform input size for the model.
 
-
 Evaluation Methodology
 To ensure the SLM performs accurately and reliably, a rigorous evaluation process was conducted. The following methodologies were employed: 
 1.	Dataset Selection : 
@@ -39,5 +38,31 @@ To ensure the SLM performs accurately and reliably, a rigorous evaluation proces
 •	Human Evaluation : In addition to automated metrics, a panel of human evaluators was tasked with assessing the quality of the model's responses. They rated the answers based on Relevance,             Clarity, Accuracy.
 •	Error Analysis : Common errors were analyzed to identify areas for improvement. For example Ambiguous Questions, Out-of-Scope Queries, Long Documents.
 
-Conclusion  
-The Small Language Model (SLM) is a carefully crafted system that combines advanced NLP techniques with practical considerations for real-world use. By leveraging a pre-trained transformer model like DistilBERT, the SLM is able to provide accurate and contextually relevant answers to user queries based on the content of various file formats. 
+
+
+Instructions for running the model
+
+To run the Small Language Model (SLM) for question-answering from a file, follow these instructions and assumes that you are working in a Python environment (e.g., Jupyter Notebook, Python script, or a virtual environment)
+1. Install Dependencies
+First, you need to install the required Python libraries. Open a terminal or command prompt and run the following commands to install the necessary dependencies.
+•	install package through : pip install transformers torch PyPDF2 python-docx
+•	Create a new Python file (e.g., SLM.py)
+
+2.	Prepare Your Input Files
+The model can read .txt, .pdf, or .docx files. Ensure your file is one of these formats and is accessible from the directory where you're running the script. For example, if you have a file called sample_document.txt
+Sample : 
+file_path : "sample_document.txt"  “ Replace with the path to your file”
+question : "Ask the based on the file?"
+Answer : “it gives the correct matching answer for the question asked, by reading the given file.” 
+File Reading : Text Files (.txt), PDF Files (.pdf), Word Documents (.docx).
+
+
+
+My Observations and key points are:
+
+1.	Understanding the Power of Pre-trained Models
+2.	File Parsing and Text Extraction.
+3.	Importance of Context in Question Answering.
+4.	Real-World Applications: Knowledge Extraction, Document Summarization, Customer support.
+5.	Performance Considerations: response time and accuracy
+The Small Language Model (SLM) is a carefully crafted system that combines advanced NLP techniques with practical considerations for real-world use. By leveraging a pre-trained transformer model like DistilBERT, the SLM is able to provide accurate and contextually relevant answers to user queries based on the content of various file formats.  
